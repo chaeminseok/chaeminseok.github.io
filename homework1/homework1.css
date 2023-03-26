@@ -1,17 +1,23 @@
 h2{
     color:white;
+    text-align: center;
+
     
 }
-
+body{
+  background-color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 .blue {
     background-color: cornflowerblue;
+    font
   }
   
   .purple {
     background-color: purple;
   }
   
-  .black {
-    background-color: black;
+.green {
+    background-color: rgb(105, 197, 0);
   }
-  
+
