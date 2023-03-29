@@ -19,7 +19,7 @@ function onsubmit(event){
         resultText.innerText="You lose the game";
     }
  
-
+    
 
 
 }
