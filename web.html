@@ -7,32 +7,59 @@
     <title>Document</title>
   </head>
   <body>
-    <input
-      type="button"
-      value="black!"
-      onclick="document.querySelector('body').style.backgroundColor='black'; "
-    />
-    <input
-      type="button"
-      value="white"
-      onclick="document.querySelector('body').style.backgroundColor='white'; "
-    />
+    <script>
+      function LinkSetColor(color) {
+        var alist = document.querySelectorAll("a");
+        var i = 0;
+        while (i < alist.length) {
+          alist[i].style.color = color;
+          i = i + 1;
+        }
+      }
+
+      function BodySetBackgroundColor(color) {
+        document.querySelector("body").style.backgroundColor = color;
+      }
+      function BodySetColor(color) {
+        document.querySelector("body").style.color = color;
+      }
+      function nightDayHandeler(self) {
+        var target = document.querySelector("body");
+        if (self.value === "night") {
+          self.value = "day";
+          Body.setBackgroundColor("white");
+          Link.setColor("powderblue");
+          Body.setColor("black");
+        } else {
+          self.value = "night";
+          Body.setBackgroundColor("black");
+          Link.setColor("red");
+          Body.setColor("white");
+        }
+      }
+    </script>
+
     <input
       id="color"
       type="button"
       value="day"
-      onclick=" 
-  
-        var target =document.querySelector('body')
-    if(  this.value==='night'){
-          this.value='day'
-        target.style.backgroundColor='white';
-    }else{
-          this.value='night';
-        target.style.backgroundColor='black';
-        
-    }
+      onclick=" nightDayHandeler(this);
+
     "
     />
+
+    <a href="https://www.naver.com/"><h1>naver</h1></a>
+    <a href="https://www.naver.com/">hi</a>
+    <a href="https://www.naver.com/">hi</a>
+    <p>
+      Editor’s Note: Keir Giles (@KeirGiles) works with the Russia and Eurasia
+      Programme of Chatham House, an international affairs think tank in the UK.
+      He is the author of “Russia’s War on Everybody: And What it Means for
+      You.” The views expressed in this commentary are his own. Read more
+      opinion on CNN. CNN — Vladimir Putin last week gave details of Russia’s
+      stated intent to base tactical nuclear weapons in Belarus. The flurry of
+      alarmist reporting on what this meant highlights much of what is wrong
+      with Western responses to Russian nuclear intimidation.
+    </p>
   </body>
 </html>
